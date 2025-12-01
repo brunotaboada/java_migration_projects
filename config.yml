@@ -1,0 +1,34 @@
+# Java Migration System Configuration
+
+# Model Configuration
+model:
+  # Model name/ID from Ollama
+  # Options: gpt-oss:120b-cloud, deepseek-v3.1:671b-cloud, llama3.2, qwen2.5, qwen3-coder:480b-cloud, minimax-m2:cloud etc.
+  name: "qwen3-coder:480b-cloud"
+  
+  # API configuration
+  api_key: "ollama"  # Ollama doesn't need a real key
+  base_url: "http://localhost:11434/v1"  # Ollama's OpenAI-compatible endpoint
+
+# Database Configuration
+database:
+  file: "agno.db"
+
+# Migration Settings
+migration:
+  # Default target Java version
+  default_java_version: "17"
+  
+  # Default modernization level (high/medium/low)
+  default_modernization_level: "high"
+  
+  # Default test coverage target (percentage)
+  default_coverage_target: 80
+
+# UI Settings
+ui:
+  # Port for AgentOS UI
+  port: 7777
+  
+  # Host (0.0.0.0 for all interfaces, 127.0.0.1 for localhost only)
+  host: "0.0.0.0"
