@@ -1,0 +1,21 @@
+# Java Migration System Configuration
+
+# Model Configuration
+model:
+  # Options: gpt-oss:120b-cloud, deepseek-v3.1:671b-cloud, llama3.2, qwen2.5, qwen3-coder:480b-cloud, minimax-m2:cloud etc.
+  name: qwen3-coder:480b-cloud
+  base_url: http://localhost:11434/v1
+  temperature: 0
+
+database:
+  file: agno.db
+
+migration:
+  default_java_version: 17
+  default_modernization_level: high
+  default_coverage_target: 80
+
+# UI Settings
+ui:
+  port: 7777
+  host: 0.0.0.0
